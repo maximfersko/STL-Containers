@@ -5,6 +5,7 @@
 
 namespace stl {
 
+ 
 template <typename T>
 class list {
  public:
@@ -125,6 +126,7 @@ class list {
   void emplace_front(Args &&...args);
 };
 
+ 
 };  // namespace stl
 
 #include "stl_list.cc"
