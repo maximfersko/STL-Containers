@@ -36,19 +36,17 @@ gcov_report: test
 	lcov -t "test" --no-external -o test.info -c -d ./
 	genhtml -o report test.info
 	open report/index.html
-
-push:
-	git add -A
-	git commit -m $(PUSHCOMMENT)
-	git push origin gwakame
+	
 
 leaks: $(clean)
 	$(CC)   $(TESTF) $(LIBCHECK)  -o leaks 
 	leaks  -atExit -- ./leaks > result.txt
 	
+	
 test: $(clean)
 	$(CC) --coverage $(SRCTEST) -o $(EXETEST) $(LIBCHECK)
 	./$(EXETEST)
+
 
 memory: $(clean) $(O)
 
