@@ -2,6 +2,7 @@
 
 namespace stl {
 
+    
 template <typename T>
 typename list<T>::reference list<T>::ListIterator::operator*() {
     if (this->iter_ == nullptr) throw std::logic_error("Error");
@@ -383,5 +384,6 @@ void list<T>::print() const {
     std::cout << "========================================" << std::endl;
 }
 
+    
 };  // namespace stl
 
