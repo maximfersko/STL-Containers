@@ -42,4 +42,4 @@ std::pair<typename set<K>::iterator, bool> set<K>::emplace(Args&&... args) {
     return result;
 }
 
-};  //  namespace s21
+};  //  namespace stl
