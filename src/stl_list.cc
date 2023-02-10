@@ -383,5 +383,5 @@ void list<T>::print() const {
     std::cout << "========================================" << std::endl;
 }
 
-};  // namespace s21
+};  // namespace stl
 
