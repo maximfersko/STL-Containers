@@ -23,7 +23,7 @@ all: test gcov_report
 
 
 $(clean):
-	rm -rf *.txt test s21_matrix_oop valgrind leaks *.dSYM *.out *.cfg
+	rm -rf *.txt test valgrind leaks *.dSYM *.out *.cfg
 	rm -rf *.gcno *.gcda *.gcov *.info report
 	rm -rf *.o *.a
 
