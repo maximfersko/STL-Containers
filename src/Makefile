@@ -27,11 +27,6 @@ $(clean):
 	rm -rf *.gcno *.gcda *.gcov *.info report
 	rm -rf *.o *.a
 
-lint:
-	cp ../materials/linters/CPPLINT.cfg . 
-	python3 ../materials/linters/cpplint.py --extensions=cpp *.cpp
-	rm -f CPPLINT.cfg
-
 gcov_report: test
 	lcov -t "test" --no-external -o test.info -c -d ./
 	genhtml -o report test.info
