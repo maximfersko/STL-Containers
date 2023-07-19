@@ -3,9 +3,7 @@
 
 #include "stl_list.h"
 #include "stl_map.h"
-#include "stl_queue.hpp"
 #include "stl_set.h"
-#include "stl_stack.hpp"
 #include "stl_vector.h"
 #include "stl_array.h"
 #include "stl_multiset.h"
