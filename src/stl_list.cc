@@ -374,7 +374,7 @@ void list<T>::sort() {
 template <typename T>
 void list<T>::print() const {
     const_iterator start(this->cbegin());
-    std::cout << "================== S21 LIST ==============" << std::endl;
+    std::cout << "================== STL LIST ==============" << std::endl;
     while (start != cend()) {
         std::cout << *start << " ";
         ++start;
