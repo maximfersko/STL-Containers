@@ -141,20 +141,16 @@ int main() {
 
 ## List
 
-# Documentation for the `list` class from the file `stl_list.h`
 
 The `list` class represents an implementation of a doubly linked list. It includes various methods for working with the list data.
 
-## Type Definitions
+### Type Definitions
+- `value_type` - The type of the elements in the list.
+- `reference` - A reference to `value_type`.
+- `const_reference` - A constant reference to `value_type`.
+- `size_type` - An unsigned integral type representing the size of the list.
 
-```cpp
-`value_type = T`;
-using reference = value_type &;
-using const_reference = const value_type &;
-using size_type = size_t;
-```
-
-## Nested Structure `Node`
+### Nested Structure `Node`
 
 ```cpp
 struct Node {
@@ -166,7 +162,7 @@ struct Node {
 
 The `Node` structure represents a node in the list and holds the data `data` along with pointers to the next and previous nodes in the list.
 
-## Nested Class `ListIterator`
+### Nested Class `ListIterator`
 
 ```cpp
 class ListIterator {
@@ -198,7 +194,7 @@ class ListIterator {
 
 The `ListIterator` class represents an iterator for traversing the list. It implements data access operators and comparison operators.
 
-## Nested Class `ListConstIterator`
+### Nested Class `ListConstIterator`
 
 ```cpp
 class ListConstIterator {
@@ -228,26 +224,6 @@ class ListConstIterator {
 ```
 
 The `ListConstIterator` class represents a constant iterator for traversing the list. It implements data access operators and comparison operators.
-
-The list class represents a doubly linked list data structure. It has various methods for manipulating the list and accessing its elements.
-
-### Type Definitions
-- `value_type` - The type of the elements in the list.
-- `reference` - A reference to `value_type`.
-- `const_reference` - A constant reference to `value_type`.
-- `size_type` - An unsigned integral type representing the size of the list.
-
-### Nested Structure Node
-The `Node` structure represents a node in the list and holds the data of type `value_type`. It also contains pointers to the next and previous nodes in the list.
-
-### Nested Class ListIterator
-The `ListIterator` class represents an iterator for traversing the list. It has methods for accessing and modifying the iterator's state. It also implements data access operators and comparison operators.
-
-### Nested Class ListConstIterator
-The `ListConstIterator` class represents a constant iterator for traversing the list. It has methods for accessing and modifying the iterator's state. It also implements data access operators and comparison operators.
-
-### Class list
-The `list` class represents a doubly linked list. It has the following public methods:
 
 #### Constructors and Destructor
 - `list()` - Constructs an empty list.
@@ -281,4 +257,40 @@ The `list` class represents a doubly linked list. It has the following public me
 - `void resize(size_type count)` - Resizes the list to contain `count` elements. If `count` is greater than the current size, additional elements are default-inserted. If `count` is less than the current size, excess elements are removed.
 - `void swap(list<T>& other)` - Swaps the contents of the list with the contents of `other`.
 
-#
+
+### Example Usage
+
+```cpp
+    #include <iostream>
+#include "st_llist.h"
+
+int main() {
+  stl::list<int> mylist;
+  
+  mylist.push_back(1);
+  mylist.push_back(2);
+  mylist.push_back(3);
+  
+  mylist.push_front(0);
+  mylist.push_front(-1);
+  
+
+  stl::list<int>::iterator it = mylist.begin();
+  it++; 
+  mylist.insert(it, 10);
+  
+
+  it = mylist.begin();
+  it++; 
+  mylist.erase(it);
+  
+
+  for (const auto& value : mylist) {
+    std::cout << value << " ";
+  }
+  std::cout << std::endl;
+  
+  return 0;
+}
+
+```
