@@ -1,5 +1,3 @@
-# STL-Containers
-
 # Custom STL Containers
 
 This repository contains a custom implementation of several Standard Template Library (STL) containers for C++.
