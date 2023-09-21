@@ -23,8 +23,6 @@ The following custom containers have been implemented:
 - [`set`](#set) - A set container that stores unique, sorted elements.
 - [`multiset`](#multiset) - A set container that allows duplicate, sorted elements.
 - [`map`](#map) - A key-value pair container with unique keys and sorted elements.
-- [`multimap`](#multimap) - A key-value pair container with duplicate keys and sorted elements.
-
 
 Each container has its own header file and documentation to help you understand its usage and behavior.
 
