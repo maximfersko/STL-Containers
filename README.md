@@ -235,6 +235,7 @@ The Set class is a template class representing an ordered container that enforce
 - `void merge(const set &other)` - Merges the contents of another set into this set.
 - `template <typename... Args> std::pair<iterator, bool> emplace(Args&&... args)` - Constructs and inserts an element into the set.
 
+## Example Usage
 
 ```cpp
 #include "stl_set.h"  // Include the Set class header
@@ -327,6 +328,7 @@ The Multiset class is a template class representing an ordered container that al
 
 These methods allow you to modify and manipulate the elements in the `multiset`, including inserting elements, counting occurrences, finding equal ranges, and searching for elements greater or equal to a specified key.
 
+## Example Usage
 
 ```cpp
 #include "multiset.h"  // Include the Multiset class header
