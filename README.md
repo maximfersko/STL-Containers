@@ -1,5 +1,57 @@
 # STL-Containers
 
+# Custom STL Containers
+
+This repository contains a custom implementation of several Standard Template Library (STL) containers for C++.
+
+## Table of Contents
+
+- [Introduction](#introduction)
+- [Implemented Containers](#implemented-containers)
+- [Getting Started](#getting-started)
+- [Build and Test](#build-and-test)
+
+## Introduction
+
+This project provides custom implementations of commonly used C++ STL containers. These custom containers aim to mimic the behavior and interfaces of their standard counterparts while offering flexibility for customization and learning purposes.
+
+## Implemented Containers
+
+The following custom containers have been implemented:
+
+- [`array`](#array) - An array-like container with a fixed size.
+- [`vector`](#vector) - A dynamic array that can grow and shrink in size.
+- [`list`](#list) - A doubly-linked list for efficient insertion and deletion of elements.
+- [`set`](#set) - A set container that stores unique, sorted elements.
+- [`multiset`](#multiset) - A set container that allows duplicate, sorted elements.
+- [`map`](#map) - A key-value pair container with unique keys and sorted elements.
+- [`multimap`](#multimap) - A key-value pair container with duplicate keys and sorted elements.
+
+
+Each container has its own header file and documentation to help you understand its usage and behavior.
+
+## Getting Started
+
+To use these custom containers in your C++ projects, follow these steps:
+
+1. Clone or download this repository to your local machine.
+
+2. Include the relevant header file(s) for the container(s) you want to use in your project.
+
+3. Use the custom containers in your C++ code as you would with the standard STL containers.
+
+## Build and Test
+
+We have provided a Makefile to simplify building and testing the custom containers. Here are some useful commands:
+
+- `make` - Compiles and runs the test cases for the custom containers.
+- `make clean` - Cleans up generated files, object files, and executables.
+- `make all` - Builds the test executable and generates a code coverage report.
+- `make gcov_report` - Generates a code coverage report using `gcov` and `lcov`.
+- `make leaks` - Checks for memory leaks using `valgrind` (Linux) or `leaks` (macOS).
+- `make test` - Run test
+
+
 # Btree
 
 The Btree class is a template class representing a B-tree data structure. It stores key-value pairs and allows efficient insertion, deletion, and search operations. The B-tree is a self-balancing binary search tree that maintains sorted data within its nodes.
